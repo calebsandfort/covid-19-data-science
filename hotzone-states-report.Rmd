@@ -1,0 +1,21 @@
+---
+title: "Hotzone States Report"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+library(ggthemes)
+library(gridExtra)
+source("hotzone-states.R")
+```
+
+## US Coronavirus Hotzones
+
+Description here...
+
+```{r grid, echo=FALSE}
+grid.arrange(get_plot_states_by_day(), get_plot_new_cases_by_state(), nrow = 2)
+```
+
